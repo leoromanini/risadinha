@@ -1,0 +1,49 @@
+{% extends 'template.html' %}
+
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/postagens.css')}}">
+{% endblock %}
+
+{% block scripts %}
+<script src="{{url_for('static', filename='js/postagens.js')}}"></script>
+{% endblock %}
+
+{% block conteudo%}
+
+<div class="row justify-content-center" style="margin: 0px;">
+
+
+    <div class="card postagem" style="width: 18rem;">
+        <img class="card-img-top" src="{{url_for('static', filename='img/card1.jpg')}}" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">Qual é o tratamento para pré-diabetes?</h5>
+            <p class="card-text">O tratamento da pré-diabetes consiste em perder peso, corrigir a alimentação e praticar exercícios físicos. Em alguns casos, são utilizados medicamentos.</p>
+            <p class="card-text">Facebook: 5 reações</p>
+            <p class="card-text">Instagram: 4 curtidas</p>
+            <a href="#" class="btn btn-primary">Ver post</a>
+        </div>
+    </div>
+
+    <div class="card postagem" style="width: 18rem;">
+        <img class="card-img-top" src="{{url_for('static', filename='img/card2.jpg')}}" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">Qual é o tratamento para febre reumática?</h5>
+            <p class="card-text">A febre reumática é tratada com antibióticos para eliminar as bactérias. O tratamento pode ser realizado em casa ou, se for grave, precisar de internação.</p>
+            <p class="card-text">Facebook: 7 reações</p>
+            <p class="card-text">Instagram: 3 curtidas</p>
+            <a href="#" class="btn btn-primary">Ver post</a>
+        </div>
+    </div>
+
+    <div class="card postagem" style="width: 18rem;">
+        <img class="card-img-top" src="{{url_for('static', filename='img/card3.jpg')}}" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">Qual é o tratamento para pancreatite aguda?</h5>
+            <p class="card-text">A pancreatite aguda normalmente se resolve sozinha, mas, dependendo do caso, cuidados de suporte, medicamentos e cirurgias podem ser necessários.</p>
+            <p class="card-text">Facebook: 7 reações</p>
+            <p class="card-text">Instagram: 8 curtidas</p>
+            <a href="#" class="btn btn-primary">Ver post</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

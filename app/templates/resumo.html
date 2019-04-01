@@ -1,0 +1,72 @@
+{% extends 'template.html' %}
+
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/resumo.css')}}">
+{% endblock %}
+
+{% block conteudo %}
+
+<div class="container div-resumo">
+    <div class="row justify-content-center titulo-resumo">
+        <h3>Resumo</h3>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card-box">
+                <div class="card-title">
+                    <h4>Hoje</h4>
+                    <p><b>Facebook</b></p>
+                    <p>&nbsp; 28 reações</p>
+                    <p>&nbsp; 10 comentários</p>
+                    <p><b>Instagram</b></p>
+                    <p>&nbsp; 10 curtidas</p>
+                    <p>&nbsp; 5 comentários</p>
+                </div>
+                <div class="card-link">
+                    <a href="" class="c-link">Ver detalhes
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card-box">
+                <div class="card-title">
+                    <h4>Esta semana</h4>
+                    <p><b>Facebook</b></p>
+                    <p>&nbsp; 48 reações</p>
+                    <p>&nbsp; 19 comentários</p>
+                    <p><b>Instagram</b></p>
+                    <p>&nbsp; 18 curtidas</p>
+                    <p>&nbsp; 12 comentários</p>
+                </div>
+                <div class="card-link">
+                    <a href="" class="c-link">Ver detalhes
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card-box">
+                <div class="card-title">
+                    <h4>Este mês</h4>
+                    <p><b>Facebook</b></p>
+                    <p>&nbsp; 68 reações</p>
+                    <p>&nbsp; 30 comentários</p>
+                    <p><b>Instagram</b></p>
+                    <p>&nbsp; 25 curtidas</p>
+                    <p>&nbsp; 23 comentários</p>
+                </div>
+                <div class="card-link">
+                    <a href="" class="c-link">Ver detalhes
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

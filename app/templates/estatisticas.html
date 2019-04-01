@@ -1,0 +1,41 @@
+{% extends 'template.html' %}
+
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/chart.css')}}">
+{% endblock %}
+
+
+{% block scripts %}
+<script src="{{url_for('static', filename='js/chart.min.js')}}"></script>
+<script src="{{url_for('static', filename='js/chart.js')}}"></script>
+{% endblock %}
+
+{% block conteudo%}
+<div class="div-resumo">
+    <div class="row justify-content-center">
+        <h3 class="">Estatísticas</h3>
+    </div>
+    <div class="row">
+        <div class="col-4 card-chart">
+            <h3>Facebook</h3>
+            <div class="chart-container">
+                <canvas id="chartFacebook"></canvas>
+            </div>
+        </div>
+        <div class="col-4 card-chart">
+            <h3>Instagram</h3>
+            <div class="chart-container">
+                <canvas id="chartInstagram"></canvas>
+            </div>
+        </div>
+        <div class="col-4 card-chart">
+            <h3>Blog</h3>
+            <div class="chart-container">
+                <canvas id="chartBlog"></canvas>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

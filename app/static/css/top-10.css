@@ -1,0 +1,44 @@
+ul.coluna2  {
+counter-reset: counter+5;
+}
+
+ul.coluna1 {
+counter-reset: counter;
+}
+
+ul.chart > li  {
+    color: #bababa;
+    display: block;
+    font-size: 11px;
+    line-height: 25px;
+    margin: 12px 0 8px;
+    padding: 0 0 0 50px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+ul.chart > li > strong  {
+    color: #121212;
+    display: block;
+    font-size: 3em;
+    font-weight: 400;
+    padding: 3px 0 18px;
+    text-transform: none;
+}
+
+ul.chart > li:before  {
+    color: #bababa;
+    content: counter(counter);
+    counter-increment: counter;
+    font: bold 32px/1 'Noto Sans', sans-serif;
+    left: 0;
+    margin: -16px 0 0;
+    position: absolute;
+    top: 50%;
+    transition: all 400ms ease;
+}
+
+
+ul.chart > li:hover:before  {
+    color: black;
+}

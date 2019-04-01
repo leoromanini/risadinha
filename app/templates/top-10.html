@@ -1,0 +1,34 @@
+{% extends 'template.html' %}
+
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/top-10.css')}}">
+{% endblock %}
+
+{% block conteudo%}
+<div class="container div-resumo">
+    <div class="row justify-content-center">
+        <h3 class="titulo-resumo">Top 10 - Marcadores</h3>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <ul class="chart coluna1">
+                <li>Educação <strong>Escola</strong></li>
+                <li>Educação <strong>Cuidadores</strong></li>
+                <li>Violencia<strong>Violencia Sexual</strong></li>
+                <li>Educação <strong>Escolas Maternais</strong></li>
+                <li>Acidente<strong>Acidente de Trânsito</strong></li>
+            </ul>
+        </div>
+        <div class="col-6">
+            <ul class="chart coluna2">
+                <li>Doença <strong>Febre</strong></li>
+                <li>Doença <strong>Inchaço</strong></li>
+                <li>Doença <strong>Câncer de pele</strong></li>
+                <li>Saúde <strong>Vitamina D</strong></li>
+                <li>Doença <strong>Vasculite</strong></li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+{% endblock %}
