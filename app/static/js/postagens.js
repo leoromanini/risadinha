@@ -3,3 +3,4 @@ $('.com-expand-holder').click(function(e){
   $(this).parent().toggleClass('active');
   $('.card-stuff').toggleClass('active');
 });
+

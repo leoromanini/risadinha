@@ -12,23 +12,22 @@
     <div class="row">
         <div class="col-6">
             <ul class="chart coluna1">
-                <li>Educação <strong>Escola</strong></li>
-                <li>Educação <strong>Cuidadores</strong></li>
-                <li>Violencia<strong>Violencia Sexual</strong></li>
-                <li>Educação <strong>Escolas Maternais</strong></li>
-                <li>Acidente<strong>Acidente de Trânsito</strong></li>
+                {% for item in top10 %}
+                    {% if loop.index <=5 %}
+                        <li>{{top10[item]}} Ocorrências <strong>{{item}}</strong></li>
+                    {% endif %}
+                {% endfor %}
             </ul>
         </div>
         <div class="col-6">
             <ul class="chart coluna2">
-                <li>Doença <strong>Febre</strong></li>
-                <li>Doença <strong>Inchaço</strong></li>
-                <li>Doença <strong>Câncer de pele</strong></li>
-                <li>Saúde <strong>Vitamina D</strong></li>
-                <li>Doença <strong>Vasculite</strong></li>
+                {% for item in top10 %}
+                    {% if loop.index > 5 %}
+                        <li>{{top10[item]}} Ocorrências <strong>{{item}}</strong></li>
+                    {% endif %}
+                {% endfor %}
             </ul>
         </div>
-
     </div>
 </div>
 {% endblock %}

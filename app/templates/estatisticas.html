@@ -16,26 +16,33 @@
         <h3 class="">Estatísticas</h3>
     </div>
     <div class="row">
-        <div class="col-4 card-chart">
+        <div class="col-12 card-chart">
+            <h3>Blogger</h3>
+            <div class="chart-container">
+                <canvas id="chartBlogger"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 card-chart">
             <h3>Facebook</h3>
             <div class="chart-container">
                 <canvas id="chartFacebook"></canvas>
             </div>
         </div>
-        <div class="col-4 card-chart">
-            <h3>Instagram</h3>
-            <div class="chart-container">
-                <canvas id="chartInstagram"></canvas>
-            </div>
-        </div>
-        <div class="col-4 card-chart">
-            <h3>Blog</h3>
-            <div class="chart-container">
-                <canvas id="chartBlog"></canvas>
-            </div>
-        </div>
-
     </div>
 </div>
 
+
+{% for item in blog %}
+<input type="hidden" class="rotulo" value="{{item}}" >
+<input type="hidden" class="quantidade" value="{{blog[item]}}">
+{% endfor %}
+
+{% for item in reacoes %}
+<input type="hidden" class="postface" value="{{item}}" >
+<input type="hidden" class="reacoes" value="{{reacoes[item]}}">
+{% endfor %}
+
 {% endblock %}
+

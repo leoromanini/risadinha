@@ -1,0 +1,1 @@
+AUTH = 'root:admin'

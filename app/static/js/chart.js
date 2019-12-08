@@ -1,40 +1,27 @@
 
-var ctx = document.getElementById('chartFacebook').getContext('2d');
-ctx.canvas.width = 100;
-ctx.canvas.height = 100;
-var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ['Jan', 'Fev', 'Mar'],
-        datasets: [{
-            label: 'Reações',
-            data: [54, 64, 35],
-            backgroundColor: 'rgba(24, 47, 71, 0.3)',
-            borderColor: 'rgba(24, 47, 71, 1)'  ,
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
-        }
-    }
-});
+var ctx = document.getElementById('chartBlogger').getContext('2d');
+elementosRotulo = $('.rotulo')
+elementosQuantidade = $('.quantidade')
 
-var ctx = document.getElementById('chartInstagram').getContext('2d');
-ctx.canvas.width = 100;
-ctx.canvas.height = 100;
+rotulos = []
+quantidade = []
+
+for(i=0;i<elementosRotulo.length;i++){
+    rotulos.push(elementosRotulo[i].value)
+}
+
+for(i=0;i<elementosQuantidade.length;i++){
+    quantidade.push(elementosQuantidade[i].value)
+}
+
+
 var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-        labels: ['Jan', 'Fev', 'Mar'],
+        labels: rotulos,
         datasets: [{
-            label: 'Curtidas',
-            data: [54, 64, 35],
+            label: 'Quantidades',
+            data: quantidade,
             backgroundColor: 'rgba(24, 47, 71, 0.3)',
             borderColor: 'rgba(24, 47, 71, 1)'  ,
             borderWidth: 1
@@ -51,16 +38,32 @@ var myChart = new Chart(ctx, {
     }
 });
 
-var ctx = document.getElementById('chartBlog').getContext('2d');
-ctx.canvas.width = 100;
-ctx.canvas.height = 100;
-var myChart = new Chart(ctx, {
-    type: 'horizontalBar',
+$('.quantidade').remove()
+$('.rotulo').remove()
+
+
+elementospost = $('.postface')
+elementosreacoes = $('.reacoes')
+
+posts = []
+reacoes = []
+
+for(i=0;i<elementospost.length;i++){
+    posts.push(elementospost[i].value)
+}
+
+for(i=0;i<elementosreacoes.length;i++){
+    reacoes.push(elementosreacoes[i].value)
+}
+
+var ctxFacebook = document.getElementById('chartFacebook').getContext('2d');
+var myChart = new Chart(ctxFacebook, {
+    type: 'line',
     data: {
-        labels: ['Jan', 'Fev', 'Mar'],
+        labels: posts,
         datasets: [{
-            label: 'Acessos',
-            data: [54, 64, 35],
+            label: 'Reacoes',
+            data: reacoes,
             backgroundColor: 'rgba(24, 47, 71, 0.3)',
             borderColor: 'rgba(24, 47, 71, 1)'  ,
             borderWidth: 1
@@ -68,7 +71,7 @@ var myChart = new Chart(ctx, {
     },
     options: {
         scales: {
-            xAxes: [{
+            yAxes: [{
                 ticks: {
                     beginAtZero: true
                 }
